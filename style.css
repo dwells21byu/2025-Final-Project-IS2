@@ -1,0 +1,219 @@
+/* ===== Global Styles ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #1f2933;
+    background-color: #f5f7fa;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* ===== Layout Helpers ===== */
+.container {
+    width: min(1120px, 92vw);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-alt {
+    background-color: #e5edf7;
+}
+
+/* ===== Header / Nav ===== */
+.site-header {
+    background: #111827;
+    color: #f9fafb;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.site-subtitle {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+.main-nav a {
+    margin-left: 1rem;
+    font-weight: 500;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+}
+.main-nav a:hover {
+    color: #ffffff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    padding-top: 5rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.hero-text h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.hero-text p {
+    margin-bottom: 0.75rem;
+}
+
+.hero-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.hero-photo {
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    max-height: 220px;
+    width: 100%;
+}
+
+.hero-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-details li {
+    font-size: 0.95rem;
+    padding: 0.25rem 0;
+}
+
+/* ===== Resume Section ===== */
+#resume h2 {
+    margin-top: 0;
+}
+
+.resume-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.resume-item-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: baseline;
+}
+
+.resume-item h4 {
+    margin: 0;
+}
+
+.resume-item-meta {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.skills-list li {
+    background-color: #e5edf7;
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+/* ===== Projects Section ===== */
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.site-footer a {
+    color: #e5e7eb;
+}
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
